@@ -1,3 +1,11 @@
+/*
+    Programa 1
+
+    Programa que Imprime mi nombre en la pantalla.
+
+    Humberto Alejandro Ortega Alcocer <humbertowoody@gmail.com>
+    2015
+*/
 #include <stdio.h>
 
 int main(int argc, char* argv[])

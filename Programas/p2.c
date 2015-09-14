@@ -1,3 +1,11 @@
+/*
+    Programa 2
+    
+    Programa que permite conocer la suma de dos números.
+
+    Humberto Alejandro Ortega Alcocer <humbertowoody@gmail.com>
+    2015
+*/
 #include <stdio.h>
 
 int main()
