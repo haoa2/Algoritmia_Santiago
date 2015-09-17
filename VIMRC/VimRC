@@ -1,7 +1,7 @@
 " VIM Configuration File
 " Description: Optimized for C/C++ development, but useful also for other things.
 " Author: Gerhard Gappmeier
-"
+" Mod: Humberto Alcocer
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -18,7 +18,7 @@ set tabstop=4        " tab width is 4 spaces
 set shiftwidth=4     " indent also with 4 spaces
 set expandtab        " expand tabs to spaces
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=120
+set textwidth=140
 " turn syntax highlighting on
 set t_Co=256
 syntax on
