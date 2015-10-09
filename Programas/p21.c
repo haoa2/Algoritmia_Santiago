@@ -7,7 +7,6 @@
     2015
 */
 #include <stdio.h>
-#include <string.h>
 
 int myatoi(char[]);
 
@@ -33,11 +32,11 @@ int main()
 
 int myatoi(char a[])
 {
-    int i = 0,
-        res = 0;
-    while(i < strlen(a))
+    int res = 0,
+        i = 0;
+
+    while(a[i] != '\0')
     {
-        printf("%d \n",res);
         res = (res*10)+(a[i]-'0');
         i++;
     }
