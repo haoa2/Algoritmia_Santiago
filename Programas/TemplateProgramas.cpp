@@ -27,7 +27,7 @@ int main()
     fout << "   " << nombre << " <" << email << ">" << std::endl;
     fout << "   " << 2015 << std::endl;
     fout << "*/" << std::endl;
-    fout << "\n// Cabeceras (Quita el comentario en las que necesites.\n";
+    fout << "\n// Cabeceras (Quita el comentario en las que necesites.)\n";
     fout << "#include <stdio.h>" << std::endl;
     fout << "//#include <stdlib.h>" << std::endl;
     fout << "//#include <string.h>" << std::endl;
