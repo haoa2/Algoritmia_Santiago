@@ -1,5 +1,5 @@
 # Fracciones
----
+
 Aquí se almacena el programa para operación de Fracciones,
 el cual cuenta con los siquientes archivos:
 
@@ -9,9 +9,9 @@ el cual cuenta con los siquientes archivos:
 
 
 
-/*
+*
     Aquí va una tabla con funciones etc..
     c:
-*/
+*
 
 **Humberto Alejandro Ortega Alcocer**
