@@ -62,6 +62,7 @@ Fraccion mixtaImpropia(Fraccion A)
 
 void imprimir(Fraccion t)
 {
+	/* Impresión Antigua 
 	if(impropia(t))
 	{
 		printf("     %-3d\n",t.b);
@@ -73,6 +74,15 @@ void imprimir(Fraccion t)
 		printf("     %-3d\n",t.b);
 		printf("%3d -----\n",t.a);
 		printf("     %-3d\n",t.c);
+	}
+	*/
+	if(impropia(t))
+	{
+		printf("     [%3d|%-3d] ",t.b,t.c);
+	}
+	else
+	{
+		printf(" %3d [%3d|%-3d] ",t.a,t.b,t.c);
 	}
 }
 
