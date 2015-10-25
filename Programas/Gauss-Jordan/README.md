@@ -33,4 +33,3 @@ Cualquier error, porfavor reportar en la sección de Issues :)
 
 **Humberto Alejandro Ortega Alcocer**
 <humbertowoody@gmail.com>
-México.

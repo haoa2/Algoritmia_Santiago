@@ -8,10 +8,20 @@
 # <3
 
 clear
-echo "Compilando $1"
+
+NOMBRE=$1
+
+if [ -z "$1" ]; then
+	echo "No se introdujo un valor para el archivo.out";
+	echo "Usando Salida.out";
+	NOMBRE="Salida"
+fi
+
+echo "Compilando $NOMBRE"
+
 
 # Usando todo tipo de comprobaciones porque #LLOLO.
-g++ *.c ../Fracciones/Fracciones.c -Wall -Wextra -ansi -pedantic -Weffc++ -Wshadow -o $1.out
+g++ *.c ../Fracciones/Fracciones.c -Wall -Wextra -ansi -pedantic -Weffc++ -Wshadow -g -o $NOMBRE.out
 
 # Mensaje Final. Clang es más descriptivo.
 echo "{Si hubo errores que no entiendes (...), usa Clang}"

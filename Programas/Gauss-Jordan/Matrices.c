@@ -34,14 +34,15 @@ void imprimir(Matriz a)
     {
         printf("Contenido de la Matriz:\n\n");
     }
-
+    
     printf("\t    |");
     for(int i = 0; i < a.tam; i++)
     {
-        printf(" %3d |",i+1);
+        printf("       %3d       |",i+1);
+        //        "  X  [%3d|%-3d] "
     }
     printf("\n\t");
-    for(int i = 0; i < ((a.tam+1)*6); i++)
+    for(int i = 0; i < ((a.tam+1)*14); i++)
     {
         printf("-");
     }
@@ -51,8 +52,16 @@ void imprimir(Matriz a)
         printf("\t %2d |",i+1);
         for(int j = 0; j < a.tam; j++)
         {
-            printf(" %3d |",a.m[i][j]);
+            //printf(" %3d |",a.m[i][j]);
+            printf(" ");
+            imprimir(a.m[i][j]);
+            printf(" |");
         }
+        //printf("\n\t");
+        //for(int i = 0; i < ((a.tam+1)*14); i++)
+        //{
+        //    printf("-");
+        //}
         printf("\n");
     }
 }
@@ -60,8 +69,12 @@ void imprimir(Matriz a)
 // Leer una Matriz
 void leer(Matriz *a)
 {
-    printf("Leyendo Matriz...\n");
+    // Variables temporales.
     char opc;
+    
+    printf("Leyendo Matriz...\n");
+
+    // Nombre de la Matriz.
     do{
         printf("¿Desea introducir un nombre para la matriz? S/N > ");
         scanf(" %c",&opc);
@@ -75,12 +88,26 @@ void leer(Matriz *a)
     {
         a->nom = "NULO";
     }
+    
+    // Dimensiones de la Matriz
+    do{
+        printf("Introduzca un valor válido para las dimensiones de la matriz:\n>");
+        scanf("%d",&a->tam);
+    }while(a->tam > MAX_DEF || a->tam < 1);
+
+    printf("Se leerá la matriz de %dx%d:\n",a->tam,a->tam);
+
+    // Elementos de la Matriz.
     for(int i = 0; i < a->tam; i++)
     {
-        for(int j = 0; j < a->tam; i++)
+        for(int j = 0; j < a->tam; j++)
         {
-            printf("Introduzca el elemento para la posición [%d][%d]: ",i,j);
-            scanf(" %d",&a->m[i][j]);
+            if (i)
+            {
+                printf("\n");
+            }
+            printf("Leyendo elemento en la posición [%d][%d].\n",i,j);
+            a->m[i][j] = leer();
         }
     }
     printf("Fin de lectura de Matriz.\n");
@@ -88,6 +115,11 @@ void leer(Matriz *a)
 
 Matriz gaussjordan(Matriz A)
 {
+    if (VERBOSE_OUT)
+    {
+        printf("Inicia el procedimiento de solución para la matriz: \n");
+        imprimir(A);
+    }
     Matriz res;
     return res;
 }

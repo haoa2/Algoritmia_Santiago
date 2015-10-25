@@ -12,6 +12,9 @@
 
 int main(int argc, char *argv[])
 {
+	Matriz A;
+	leer(&A);
+	imprimir(A);
 
     return 0;
 }
