@@ -36,7 +36,7 @@
 struct _Matriz
 {
     Fraccion m[MAX_DEF][MAX_DEF];    // La matriz.
-    char * nom;                 // Nombre de la Matriz.
+    char *nom;                 // Nombre de la Matriz.
     int tam;
 };
 

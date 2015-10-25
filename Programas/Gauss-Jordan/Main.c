@@ -13,8 +13,11 @@
 int main(int argc, char *argv[])
 {
 	Matriz A;
+	printf("Leyendo...\n");
 	leer(&A);
+	printf("Imprimiendo...\n");
 	imprimir(A);
+	printf("OKTL\n");
 
     return 0;
 }

@@ -78,7 +78,7 @@ void imprimir(Fraccion t)
 	*/
 	if(impropia(t))
 	{
-		printf("  X  [%3d|%-3d] ",t.b,t.c);
+		printf("   X [%3d|%-3d] ",t.b,t.c);
 	}
 	else
 	{

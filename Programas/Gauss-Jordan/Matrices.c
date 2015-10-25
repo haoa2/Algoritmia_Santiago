@@ -34,7 +34,7 @@ void imprimir(Matriz a)
     {
         printf("Contenido de la Matriz:\n\n");
     }
-    
+
     printf("\t    |");
     for(int i = 0; i < a.tam; i++)
     {
@@ -52,16 +52,15 @@ void imprimir(Matriz a)
         printf("\t %2d |",i+1);
         for(int j = 0; j < a.tam; j++)
         {
-            //printf(" %3d |",a.m[i][j]);
             printf(" ");
             imprimir(a.m[i][j]);
             printf(" |");
         }
-        //printf("\n\t");
-        //for(int i = 0; i < ((a.tam+1)*14); i++)
-        //{
-        //    printf("-");
-        //}
+        printf("\n\t");
+        for(int i = 0; i < ((a.tam+1)*14); i++)
+        {
+            printf("-");
+        }
         printf("\n");
     }
 }
@@ -81,14 +80,14 @@ void leer(Matriz *a)
     }while(opc != 's' && opc != 'S' && opc != 'n' && opc != 'N');
     if(opc == 's' || opc == 'S')
     {
-        printf("Introduzca el nombre de la matriz: ");
-        scanf(" %s",&a->nom);
+        printf("Introduzca el nombre de la matriz (Máx. 140 caracteres): ");
+        scanf(" %140[^\n]", a->nom);
     }
     else
     {
-        a->nom = "NULO";
+        a->nom = NOMBRE_NULO;
     }
-    
+
     // Dimensiones de la Matriz
     do{
         printf("Introduzca un valor válido para las dimensiones de la matriz:\n>");
