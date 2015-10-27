@@ -79,24 +79,26 @@ int main(int argc, char *argv[])
 
 int busqueda(int dato, int* vec, int tam)
 {
-    int abajo = 0,
-        arriba = tam-1,
-        temp;
+    int l = 0,
+        r = tam-1,
+        m;
 
-    while(abajo <= arriba)
+    while(l <= r)
     {
-        temp = ((arriba - abajo)/2)+abajo;
-        if(vec[temp] == dato)
+        m = l + (r-l)/2;
+
+        if(vec[m] == dato)
         {
-            return temp;
+            return m;
         }
-        else if(vec[temp] < dato)
+        
+        if(vec[m] < dato)
         {
-            arriba = temp;
+            l = m+1;
         }
         else
         {
-            abajo = temp;
+            r = m-1;
         }
     }
     return -1;
