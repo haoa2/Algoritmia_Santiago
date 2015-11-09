@@ -8,14 +8,20 @@
 	Humberto Alejandro Ortega Alcocer <humbertowoody@gmail.com>
 	2015
 */
-// La cabecera principal.
+
+// Modifíquese al gusto.
+#define VERBOSE_OUTPUT 1
+
+// Las cabeceras principales.
 #include "Sorts.h"
+#include "Searches.h"
 
 // STD Headers.
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
+// Prototipos de funciones locales.
 void menu_principal();
 void arreglo_manual(int*,int);
 void arreglo_aelatorio(int*,int);

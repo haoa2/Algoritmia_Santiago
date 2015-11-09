@@ -9,9 +9,17 @@
 #ifndef SORTS_H_INCLUDED
 #define SORTS_H_INCLUDED
 
+// true y false... ok.
+#ifndef true
+#define true 1
+#endif
+#ifndef false
+#define false 0
+#endif
+
 // Para activar la salida dentro de las funciones.
 #ifndef VERBOSE_OUTPUT
-#define VERBOSE_OUTPUT 0
+#define VERBOSE_OUTPUT false
 #endif
 
 // Para cambiar el tamaño máximo de un array.
