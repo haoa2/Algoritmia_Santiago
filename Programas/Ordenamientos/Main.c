@@ -10,7 +10,8 @@
 */
 
 // Modifíquese al gusto.
-#define VERBOSE_OUTPUT 1
+#define VERBOSE_OUTPUT 0
+#define MAX_TAM 1000000
 
 // Las cabeceras principales.
 #include "Sorts.h"
@@ -98,12 +99,12 @@ int main()
 			fin = clock();
 			printf("\t-El tiempo consumido fue de %f segundos.\n\n", tiempo_real(inicio,fin));
 
-			printf("-Bucket Sort.\n");
+			/*printf("-Bucket Sort.\n");
 			copiar(temp,arr,tam);
 			inicio = clock();
 			bucketsort(temp,tam);
 			fin = clock();
-			printf("\t-El tiempo consumido fue de %f segundos.\n\n", tiempo_real(inicio,fin));
+			printf("\t-El tiempo consumido fue de %f segundos.\n\n", tiempo_real(inicio,fin));*/
 
 			printf("-Insertion Sort.\n");
 			copiar(temp,arr,tam);
@@ -112,12 +113,12 @@ int main()
 			fin = clock();
 			printf("\t-El tiempo consumido fue de %f segundos.\n\n", tiempo_real(inicio,fin));
 				
-			printf("-Radix Sort.\n");
+			/*printf("-Radix Sort.\n");
 			copiar(temp,arr,tam);
 			inicio = clock();
 			radixsort(temp,tam);
 			fin = clock();
-			printf("\t-El tiempo consumido fue de %f segundos.\n\n", tiempo_real(inicio,fin));
+			printf("\t-El tiempo consumido fue de %f segundos.\n\n", tiempo_real(inicio,fin));*/
 
 			printf("-Counting Sort.\n");
 			copiar(temp,arr,tam);

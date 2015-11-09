@@ -120,5 +120,14 @@ Matriz gaussjordan(Matriz A)
         imprimir(A);
     }
     Matriz res;
+    res.tam = A.tam;
+    res.nom = A.nom;
+    for(int i = 0; i < A.tam; i++)
+    {
+        for(int j = 0; j < A.tam; j++)
+        {
+            res.m[i][j] = division(A.m[i][j],A.m[i][i]);
+        }
+    }
     return res;
 }

@@ -19,10 +19,6 @@ void bubblesort(int* arr, int tam)
 		printf("Se ha llamado a la función bubblesort\n");
 		printf("Se ordenará un arreglo de tamaño %d\n", tam);
 	}
-	else
-	{
-		printf("NO NI MERGAS.\n");
-	}
 	for(int i = 0; i < tam; i++)
 	{
 		for(int j = i+1; j < tam; j++)
@@ -106,7 +102,7 @@ void quicksort (int *a, int n)
     if (n < 2)
         return;
     p = a[n / 2];
-    for (i = 0, j = n - 1;; i++, j--) 
+    for (i = 0, j = n - 1;/* Infinito */; i++, j--) 
     {
         while (a[i] < p)
         {
@@ -124,16 +120,7 @@ void quicksort (int *a, int n)
         a[i] = a[j];
         a[j] = t;
     }
-    quicksort(a, i);
-    quicksort(a + i, n - i);
+    quicksort(a, i);            // Recursividad en primera mitad.
+    quicksort(a + i, n - i);    // Recursividad en segunda mitad
 }
 
-void bucketsort(int* a, int n)
-{
-
-}
-
-void radixsort(int* a, int n)
-{
-
-}

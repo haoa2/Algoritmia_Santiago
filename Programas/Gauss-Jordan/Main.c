@@ -12,12 +12,12 @@
 
 int main(int argc, char *argv[])
 {
-	Matriz A;
-	printf("Leyendo...\n");
-	leer(&A);
-	printf("Imprimiendo...\n");
-	imprimir(A);
-	printf("OKTL\n");
-
+    printf("\tMétodo de Gauss - Jordan.\n\n");
+    Matriz a;
+    printf("Se leerá la matriz.\n");
+    leer(&a);
+    printf("Aplicando el método de Gauss-Jordan queda:\n");
+    imprimir(gaussjordan(a));
+    printf("Fin del Programa.\n");
     return 0;
 }
