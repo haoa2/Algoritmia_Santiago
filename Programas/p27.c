@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
     {
         filename = argv[1];
     }
-
+    
     file2arr(filename,buffer);
-
+    
     if(argc != 3)
     {
         printf("Introduce un String a buscar: ");
@@ -64,9 +64,8 @@ void file2arr(char* filename, char* buffer)
     in = fopen(filename,"r");
     char temp;
     
-    for(int i = 0; i < MAX_BUFFER && ((temp = fgetc(in)) != EOF); i++){
-        buffer[i] = temp;
-    }
+    
+
     fclose(in);
 }
 

@@ -74,7 +74,7 @@ void countingsort(int *array, int n, int min, int max)
   int i, j, z;
  
   int rango = max - min + 1;
-  int *count = malloc(rango * sizeof(*array));
+  int *count = (int*)malloc(rango * sizeof(*array));
  
   for(i = 0; i < rango; i++)
   {
