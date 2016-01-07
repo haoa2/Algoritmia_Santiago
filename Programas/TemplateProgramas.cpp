@@ -55,7 +55,9 @@ int main()
     fout << "// Función Principal." << std::endl;
     fout << "int main(int argc, char *argv[])" << std::endl;
     fout << "{" << std::endl;
+    fout << "    printf(\"\\t\\t" << titulo << "\\n\");" << std::endl;
     fout << "    // ..." << std::endl;
+    fout << "    printf(\"Fin del Programa\\n\");" << std::endl;
     fout << "    return 0; // Fin del Programa con estado 0." << std::endl;
     fout << "}" << std::endl << std::endl;
     fout << "// Implementación de Funciones" << std::endl << std::endl << std::endl;
